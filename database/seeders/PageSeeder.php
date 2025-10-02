@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class PageSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
           DB::table('pages')->insert([
@@ -26,12 +22,6 @@ class PageSeeder extends Seeder
                 'page_type'  => 'Company',
                 'description'=> 'Small, medium, and large businesses',
                 'image'      => 'com.png',
-            ],
-            [
-                'page_id'    => 'SUB',
-                'page_type'  => 'Subsidiary',
-                'description'=> 'Sub-pages associated with an existing page',
-                'image'      => 'sub.png',
             ],
         ]);
     }

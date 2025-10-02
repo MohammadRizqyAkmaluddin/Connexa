@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class EmploymentSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
         DB::table('employment')->insert([

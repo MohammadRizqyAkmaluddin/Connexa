@@ -16,7 +16,7 @@ class CompanyRoles extends Migration
         Schema::create('company_roles', function (Blueprint $table) {
             $table->string('user_id', 10);
             $table->string('company_id', 10);
-            $table->string('role', 10);
+            $table->string('role', 50);
             $table->engine = 'InnoDB';
 
             $table->primary(['user_id', 'company_id']);

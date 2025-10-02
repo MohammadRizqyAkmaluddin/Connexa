@@ -3,14 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Subsidiary;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+
     public function run()
     {
         $this->call([
@@ -30,6 +27,21 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call([
             UserSeeder::class,
+        ]);
+        $this->call([
+            companySeeder::class,
+        ]);
+        $this->call([
+            SubsidiarySeeder::class,
+        ]);
+        $this->call([
+            MajorSeeder::class,
+        ]);
+        $this->call([
+            CompanyRoleSeeder::class,
+        ]);
+        $this->call([
+            AccessSeeder::class,
         ]);
     }
 }

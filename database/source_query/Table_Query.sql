@@ -51,10 +51,10 @@ CREATE TABLE companies (
     page_id VARCHAR(3),
     name VARCHAR(50),
     industry VARCHAR(50),
-    tagline VARCHAR(250),
+    tagline VARCHAR(250) NULL,
     established_date DATE,
-    country VARCHAR(10),
-    city VARCHAR(10),
+    country VARCHAR(50),
+    city VARCHAR(50),
    	logo VARCHAR(255) DEFAULT 'empty_company_profile.png',
     cover_image VARCHAR(255) DEFAULT 'empty_company_cover.png',
 
@@ -63,10 +63,23 @@ CREATE TABLE companies (
 )ENGINE=InnoDB;
 
 CREATE TABLE subsidiary (
-    subsidiary_id VARCHAR(10) PRIMARY KEY,
-    company_id VARCHAR(10),
+    company_id VARCHAR(10) PRIMARY KEY,
+    parent_id VARCHAR(10),
 
     FOREIGN KEY (company_id) REFERENCES companies(company_id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (parent_id) REFERENCES companies(company_id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE access_management (
+    company_id VARCHAR(10),
+    user_id VARCHAR(10),
+
+    PRIMARY KEY (company_id, user_id),
+    FOREIGN KEY (company_id) REFERENCES companies(company_id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=InnoDB;
 

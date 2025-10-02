@@ -14,11 +14,14 @@ class Subsidiary extends Migration
     public function up()
     {
         Schema::create('subsidiary', function (Blueprint $table) {
-            $table->string('subsidiary_id', 10)->primary();
-            $table->string('company_id', 10);
+            $table->string('company_id', 10)->primary();
+            $table->string('parent_id', 10);
             $table->engine = 'InnoDB';
 
             $table->foreign('company_id')
+                ->references('company_id')->on('companies')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('parent_id')
                 ->references('company_id')->on('companies')
                 ->onDelete('cascade')->onUpdate('cascade');
         });

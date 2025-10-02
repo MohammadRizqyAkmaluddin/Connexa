@@ -20,8 +20,8 @@ class Companies extends Migration
             $table->string('industry', 50);
             $table->string('tagline', 250);
             $table->date('established_date');
-            $table->string('country', 10);
-            $table->string('city', 10);
+            $table->string('country', 50);
+            $table->string('city', 50);
             $table->text('logo');
             $table->text('cover_image');
             $table->engine = 'InnoDB';

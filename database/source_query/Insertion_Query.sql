@@ -1,7 +1,6 @@
 INSERT INTO pages (page_id, page_type, description, image) VALUES
 ('EDU','Educational Institution','School and universities','edu.jpg'),
-('COM','Company','Small, medium, and large businesses','com.jpg'),
-('SUB','Subsidiary','Sub-pages associated with an existing page','sub.jpg');
+('COM','Company','Small, medium, and large businesses','com.jpg');
 
 INSERT INTO employment (employment_id, employment_type) VALUES
 ('FT','Full-time'),('PT','Part-time'),('CO','Contract'),('IN','Internship');
@@ -117,13 +116,50 @@ INSERT INTO users (user_id, name, phone_number, gender, dob, country, city, emai
 ('U097','Rizal Hakim','087891234568','Male','2000-12-05','Indonesia','Semarang','rizal.hakim@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','DevOps Engineer | Docker & Kubernetes | Focused on automation and CI/CD','profil97.jpg','basic_cover9.jpg'),
 ('U098','Nadia Salsabila','088912345679','Female','2000-04-14','Indonesia','Makassar','nadia.salsabila@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','QA Engineer | Automated Testing | Passionate about software quality','profil98.jpg','basic_cover10.jpg'),
 ('U099','Dewi Kartika','089123456790','Female','2000-06-28','Indonesia','Denpasar','dewi.kartika@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','Business Analyst | Skilled in requirements gathering and process improvement','profil99.jpg','basic_cover11.jpg'),
-('U100','Andi Prasetya','080234567892','Male','2000-10-09','Indonesia','Bogor','andi.prasetya@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','Network Security Specialist | Experienced in firewalls and VPNs | Interested in cybersecurity research','profil100.jpg','basic_cover12');
+('U100','Andi Prasetya','080234567892','Male','2000-10-09','Indonesia','Bogor','andi.prasetya@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','Network Security Specialist | Experienced in firewalls and VPNs | Interested in cybersecurity research','profil100.jpg','basic_cover12'),
+('U101','Wiliam Tanuwijaya','088912345679','Male','2000-04-14','Indonesia','Central Jakarta','wiliam.tanuwijaya@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','Entrepreneur and advocate for digital economy and e-commerce | Passionate about software quality','profil99.jpg','basic_cover10.jpg'),
+('U102','Nadiem Makarim','083456789124','Male','2000-12-24','Indonesia','West Jakarta','nadiem.makarim@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','Founder of Gojek Company | Entrepreneur and advocate | Marketing Specialist','profil100.jpg','basic_cover10.jpg'),
+('U102','Satya Nadella','083456789124','Male','2000-12-24','United States','Washington DC','satya.nadella@gmail.com','$2y$10$d4it.de0T9ma7loO434H4.QjPjsZ/ciF4tAt/i6llyQI5BHkAG0Ze','CEO of Microsoft Cooperate | Entrepreneur and advocate | Marketing Specialist','profil01.jpg','basic_cover10.jpg');
 
+INSERT INTO companies (company_id, page_id, name, industry, tagline, established_date, country, city, logo, cover_image) VALUES
+('C001','COM','Microsoft','Software Development','Empower every person and every organization on the planet to achieve more','1975-04-04','United States','Redmond, Washington','microsoft.jpg','microsoft_cover.jpg'),
+('C002','COM','Meta Platform','Social Networking Software','Connection is evolving and so are we','2004-02-04','United States','California','meta.jpg','meta_cover.jpg'),
+('C003','COM','Facebook','Social Networking Software','Connect with friends and the world around you on Facebook','2004-02-04','United States','California','facebook.jpg','facebook_cover.jpg'),
+('C004','COM','Instagram','Social Networking Software','Bringing you closer to the people and things you love','2010-10-06','United States','California','instagram.jpg','instagram_cover.jpg'),
+('C005','COM','Apple','Computers and Electronics Manufacturing','Think Different','1976-04-01','United States','California','apple.jpg','apple_cover.jpg'),
+('C006','COM','GoTo Group','Software Development','Go Far, Go Together','2021-05-17','Indonesia','Central Jakarta','goto.jpg','goto_cover.jpg'),
+('C007','COM','Tokopedia','E-Commerce Software','Empowering everyone to start and grow','2009-08-17','Indonesia','Central Jakarta','tokopedia.jpg','tokopedia_cover.jpg'),
+('C008','COM','Gojek','Courier Software','Everyday solutions, one app away','2010-12-05','Indonesia','South Jakarta','gojek.jpg','gojek.jpg'),
+('C009','EDU','Bina Nusantara University','Higher Education','Fostering and Empowering the Society in Building and Serving the Nation','1981-06-01','Indonesia','West Jakarta','binus.jpg','binus_cover.jpg'),
+('C010','EDU','BINUS School Education','Primary and Secondary Education','Fostering and Empowering the Society in Building and Serving the Nation','2001-03-25','Indonesia','West Jakarta','binus_school.jpg','binus_school_cover.jpg'),
+('C011','EDU','Harvard University','Higher Education','Pursuing truth. Shaping the future','1636-10-28','United States','Cambridge','harvard.jpg','harvard_cover.jpg'),
+('C012','COM','Ubisoft','Computer Games','Creating worlds of fun and adventure','1986-03-28','France','Saint Mande','ubisoft.jpg','ubisoft_cover.jpg'),
+('C013','COM','Bank Central Asia','Banking','Trusted partner for your financial journey','1957-02-21','Indonesia','Central Jakarta','bca.jpg','bca_cover.jpg');
 
-php artisan make:seeder PageSeeder
-php artisan make:seeder EmpploymentSeeder
-php artisan make:seeder ModesSeeder
-php artisan make:seeder ProficienciesSeeder
-php artisan make:seeder SectionsSeeder
+INSERT INTO subsidiary (company_id, parent_id) VALUES
+('C003','C002'),('C004','C003'),('C007','C006'),('C008','C006'),('C010','C009');
 
+INSERT INTO major (company_id, major) VALUES
+('C009','Bachelor of Computer Science'),('C009','Bachelor of Cyber Security'),('C009','Bachelor of Data Science'),('C009','Bachelor of Software Engineering'),
+('C009','Bachelor of Information Systems'),('C009','Bachelor of Business Analytics'),('C009','Bachelor of Visual Communication Design'),
+('C009','Bachelor of Interior Design'),('C009','Bachelor of Accounting'),('C009','Bachelor of Finance'),('C009','Bachelor of Business Management'),
+('C009','Bachelor of International Relations'),('C009','Bachelor of Psychology'),('C009','Master of Management'),('C009','Master of Information System Management'),
+('C009','Master of Computer Science'),('C009','Master of Accounting'),('C009','Master of Communication'),('C009','Master of Marine Digital Technology'),
+('C009','Master of Digital Business Fisheries'),('C009','Doctor of Computer Science'),('C009','Doctor of Research in Management'),('C010','IB Primary Years Programme (PYP)'),
+('C010','IB Middle Years Programme (MYP)'),('C010','IB Diploma Programme (DP)'),('C011','Bachelor of Arts'),('C011','Bachelor of Science'),('C011','Master of Arts'),
+('C011','Bachelor of Science'),('C011','Master of Arts'),('C011','Master of Science'),('C011','Master of Engineering'),('C011','Master of Business Administration (MBA)'),
+('C011','Master of Divinity'),('C011','Master of Education'),('C011','Master of Laws'),('C011','Master of Medical Science'),('C011','Doctor of Philosophy'),
+('C011','Doctor of Medicine'),('C011','Doctor of Law'),('C011','Doctor of Theology'),('C011','Doctor of Juridical Science'),('C011','Doctor of Education Leadership');
 
+INSERT INTO access_management (company_id, user_id) VALUES
+('C001','U061'),('C001','U004'),('C002','U063'),('C002','U004'),('C003','U063'),('C003','U004'),
+('C004','U063'),('C004','U004'),('C005','U062'),('C005','U004'),('C006','U102'),('C006','U004'),
+('C007','U101'),('C007','U004'),('C008','U102'),('C008','U004'),('C009','U003'),('C010','U004'),
+('C011','U006'),('C012','U004'),('C012','U017'),('C013','U004');
+
+INSERT INTO company_roles (user_id, company_id, role) VALUES
+('U061','C001','Founder'),('U103','C001','CEO'),('U004','C001','CTO'),
+('U063','C004','Founder & CEO'),
+('U062','C005','Founder'),('U070','C005','CEO'),
+('U102','C006','Founder & CEO'),
+('U101','C007','Founder'),('U004','C007','CEO');

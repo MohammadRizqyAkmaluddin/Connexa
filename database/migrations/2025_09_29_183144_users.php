@@ -23,7 +23,7 @@ class Users extends Migration
             $table->string('city', 50)->nullable();
             $table->string('email', 50);
             $table->string('password', 255);
-            $table->string('headline', 50)->default('--');
+            $table->string('headline', 255)->default('--');
             $table->string('profile_image', 255)->default('empty_user_profile.png');
             $table->string('cover_image', 255)->default('empty_user_cover.png');
             $table->engine = 'InnoDB';

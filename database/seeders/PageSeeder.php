@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class PagesSeeder extends Seeder
+class PageSeeder extends Seeder
 {
     /**
      * Run the database seeds.

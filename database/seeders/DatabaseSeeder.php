@@ -14,19 +14,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PagesSeeder::class,
+            PageSeeder::class,
         ]);
         $this->call([
             EmploymentSeeder::class,
         ]);
         $this->call([
-            ModesSeeder::class,
+            ModeSeeder::class,
         ]);
         $this->call([
-            ProficienciesSeeder::class,
+            ProficiencySeeder::class,
         ]);
         $this->call([
-            SectionsSeeder::class,
+            SectionSeeder::class,
+        ]);
+        $this->call([
+            UserSeeder::class,
         ]);
     }
 }

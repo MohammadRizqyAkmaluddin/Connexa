@@ -39,7 +39,7 @@ CREATE TABLE users (
     city VARCHAR(50) NULL,
     email VARCHAR(50),
     `password` VARCHAR(255),
-    headline VARCHAR(50) DEFAULT '--',
+    headline VARCHAR(255) DEFAULT '--',
     profile_image VARCHAR(255) DEFAULT 'empty_user_profile.png',
     cover_image VARCHAR(255) DEFAULT 'empty_user_cover.png'
 )ENGINE=InnoDB;

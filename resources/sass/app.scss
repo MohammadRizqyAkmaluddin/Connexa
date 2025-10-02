@@ -1,0 +1,75 @@
+
+// CUSTOM
+
+$primary: #294582;
+
+.py-2-5 {
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 4rem,
+  7: 5rem,
+  8: 6rem
+  8: 7rem
+  8: 8rem
+  9: 9rem
+  10: 10rem
+);
+
+$font-sizes: (
+  1: 2.5rem, // fs-1
+  2: 2rem,   // fs-2
+  3: 1.75rem,
+  4: 1.5rem,
+  5: 1.25rem,
+  6: 1rem,
+  7: 0.875rem,
+  8: 0.850rem,  
+  9: 0.825rem,  
+  10: 0.800rem,  
+  11: 0.750rem
+);
+
+
+
+@import 'bootstrap/scss/bootstrap';
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    display: flex;
+    justify-content: left;
+    height: 100px;
+    width: 95%;
+}
+.navbar img {
+    width: 150px;
+}
+
+.register-link {
+    text-decoration: none;    
+}
+.register-link:hover {
+    text-decoration: underline;    
+}
+
+
+.button-main {
+    border: 1px solid rgba(0, 0, 0, 0.221);
+}
+.button-main:hover {
+    background-color: #ecececa7;
+    border: 1px solid rgb(58, 58, 58);
+}

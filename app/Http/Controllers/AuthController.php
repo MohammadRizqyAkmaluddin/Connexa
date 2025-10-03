@@ -17,8 +17,7 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-        'firstname'     => 'required|string|max:255',
-        'lastname'      => 'required|string|max:255',
+        'fullname'      => 'required|string|max:255',
         'phone_number'  => 'required|string|max:20',
         'gender'        => 'required|string|max:50',
         'dob_month'     => 'required|integer|min:1|max:12',
@@ -39,7 +38,7 @@ class AuthController extends Controller
 
         User::create([
             'user_id'       => $newId,
-            'name'          => $request->firstname . ' ' . $request->lastname,
+            'name'          => $request->fullname,
             'phone_number'  => $request->phone_number,
             'gender'        => $request->gender,
             'dob'           => $dob,

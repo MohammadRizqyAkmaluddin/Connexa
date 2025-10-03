@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Afacad:ital,wght@0,400..700;1,400..700&family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Covered+By+Your+Grace&family=Gabarito:wght@400..900&family=Gloock&family=Koulen&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url('CSS/style.css')}}">
-    <link rel="icon" href="{{ asset('IMG/logos/blue-bg.png') }}" class="img-fluid" style="width:120px;" type="image/png">
+    <link rel="icon" href="{{ asset('IMG/logos/connexa1.png') }}" class="img-fluid" style="width:120px;" type="image/png">
     <title>Connexa</title>  
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 </head>
 <body>
     <div class="navbar">
-        <img src="{{ asset('IMG/logos/blue-logo.png') }}" alt="">
+        <img src="{{ asset('IMG/logos/connexa3.png') }}" alt="">
     </div>
 
     <div class="login-form shadow p-4 pt-4 rounded" style="width: 500px">
@@ -38,16 +38,12 @@
         <form class="row mx-auto fs-9" style="width: 400px" action="{{ route('register.submit') }}" method="POST">
             @csrf
             <div class="mb-3 fs-7">
-                <label class="form-label">First name</label>
-                <input class="form-control fs-7" type="text" name="firstname" id="formGroupExampleInput" placeholder="First name" value="{{ old('first_name') }}">
-            </div>
-            <div class="mb-3 fs-7">
-                <label class="form-label">Last name</label>
-                <input class="form-control fs-7" type="text" name="lastname" id="formGroupExampleInput2" placeholder="Last name" value="{{ old('last_name') }}">
+                <label class="form-label">Full name</label>
+                <input class="form-control fs-7" type="text" name="fullname" id="formGroupExampleInput" placeholder="Full name" >
             </div>
             <div class="mb-3 fs-7"  style="width: 50%">
                 <label class="form-label">Phone number</label>
-                <input class="form-control fs-7" type="text" name="phone_number" id="formGroupExampleInput" placeholder="Phone number" value="{{ old('phone_number') }}">
+                <input class="form-control fs-7" type="text" name="phone_number" id="formGroupExampleInput" placeholder="Phone number">
             </div>
             <div class="mb-3 fs-7" style="width: 50%">
                 <label class="form-label">Gender</label>

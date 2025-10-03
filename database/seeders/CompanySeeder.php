@@ -21,7 +21,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'Redmond, Washington',
                 'logo'              => 'microsoft.jpg',
-                'cover_image'       => 'microsoft_cover.jpg',
+                'cover_image'       => 'microsoft.jpg',
             ],
             [
                 'company_id'        => 'C002',
@@ -33,7 +33,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'California',
                 'logo'              => 'meta.jpg',
-                'cover_image'       => 'meta_cover.jpg',
+                'cover_image'       => 'meta.jpg',
             ],
             [
                 'company_id'        => 'C003',
@@ -45,7 +45,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'California',
                 'logo'              => 'facebook.jpg',
-                'cover_image'       => 'facebook_cover.jpg',
+                'cover_image'       => 'facebook.jpg',
             ],
             [
                 'company_id'        => 'C004',
@@ -57,7 +57,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'California',
                 'logo'              => 'instagram.jpg',
-                'cover_image'       => 'instagram_cover.jpg',
+                'cover_image'       => 'instagram.jpg',
             ],
             [
                 'company_id'        => 'C005',
@@ -69,7 +69,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'California',
                 'logo'              => 'apple.jpg',
-                'cover_image'       => 'apple_cover.jpg',
+                'cover_image'       => 'apple.jpg',
             ],
             [
                 'company_id'        => 'C006',
@@ -81,7 +81,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'Indonesia',
                 'city'              => 'Central Jakarta',
                 'logo'              => 'goto.jpg',
-                'cover_image'       => 'goto_cover.jpg',
+                'cover_image'       => 'goto.jpg',
             ],
             [
                 'company_id'        => 'C007',
@@ -93,7 +93,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'Indonesia',
                 'city'              => 'Central Jakarta',
                 'logo'              => 'tokopedia.jpg',
-                'cover_image'       => 'tokopedia_cover.jpg',
+                'cover_image'       => 'tokopedia.jpg',
             ],
             [
                 'company_id'        => 'C008',
@@ -117,7 +117,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'Indonesia',
                 'city'              => 'West Jakarta',
                 'logo'              => 'binus.jpg',
-                'cover_image'       => 'binus_cover.jpg',
+                'cover_image'       => 'binus.jpg',
             ],
             [
                 'company_id'        => 'C010',
@@ -129,7 +129,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'Indonesia',
                 'city'              => 'West Jakarta',
                 'logo'              => 'binus_school.jpg',
-                'cover_image'       => 'binus_school_cover.jpg',
+                'cover_image'       => 'binus_school.jpg',
             ],
             [
                 'company_id'        => 'C011',
@@ -141,7 +141,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'United States',
                 'city'              => 'Cambridge',
                 'logo'              => 'harvard.jpg',
-                'cover_image'       => 'harvard_cover.jpg',
+                'cover_image'       => 'harvard.jpg',
             ],
             [
                 'company_id'        => 'C012',
@@ -153,7 +153,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'France',
                 'city'              => 'Saint Mande',
                 'logo'              => 'ubisoft.jpg',
-                'cover_image'       => 'ubisoft_cover.jpg',
+                'cover_image'       => 'ubisoft.jpg',
             ],
             [
                 'company_id'        => 'C013',
@@ -165,7 +165,7 @@ class CompanySeeder extends Seeder
                 'country'           => 'Indonesia',
                 'city'              => 'Central Jakarta',
                 'logo'              => 'bca.jpg',
-                'cover_image'       => 'bca_cover.jpg',
+                'cover_image'       => 'bca.jpg',
             ],
         ]);
     }

@@ -16,7 +16,7 @@ class CompanyRoleSeeder extends Seeder
                 'role'          => 'Founder',
             ],
             [
-                'user_id'       => 'U103',
+                'user_id'       => 'U102',
                 'company_id'    => 'C001',
                 'role'          => 'CEO',
             ],
@@ -46,13 +46,23 @@ class CompanyRoleSeeder extends Seeder
                 'role'          => 'Founder & CEO',
             ],
             [
-                'user_id'       => 'U101',
+                'user_id'       => 'U068',
                 'company_id'    => 'C007',
                 'role'          => 'Founder',
             ],
             [
                 'user_id'       => 'U004',
                 'company_id'    => 'C007',
+                'role'          => 'CEO',
+            ],
+            [
+                'user_id'       => 'U101',
+                'company_id'    => 'C008',
+                'role'          => 'Founder',
+            ],
+            [
+                'user_id'       => 'U092',
+                'company_id'    => 'C008',
                 'role'          => 'CEO',
             ],
         ]);
